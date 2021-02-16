@@ -1,0 +1,19 @@
+.notification-item-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:before {
+    content: 'x';
+    font-size: 16px;
+    font-weight: bold;
+    top: 2px;
+    left: 2px;
+    color: rgba(50, 50, 50, 0.7);
+  }
+}

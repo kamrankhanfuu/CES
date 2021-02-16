@@ -1,0 +1,163 @@
+<style>
+  tr td {
+    height: 32px !important;
+  }
+
+  tr td span {
+    text-align: center;
+  }
+  tr td span img{
+    max-width: 330px;
+    height: 150px;
+  }
+</style>
+
+<div id="pageHeader">
+  <table style="margin-left: auto; margin-right: auto; width: 1100px;">
+    <tr>
+      <td colspan="3"
+        style="border-bottom: 2px solid black; background-color: #7f7f7f; color: white;text-align: center">
+        <span style=" font-weight: bold;font-size:16px;margin-right: 10px;">CE Solutions Group</span> <span
+          style="font-size: 14px;">259 Columbia Street / Brooklyn, NY 11231/ 24 Hour Dispatch (646) 606-0442 / Email :
+          Conedorders@nyc2way.com</span>
+      </td>
+
+    </tr>
+    <tr>
+      <td colspan="2" style="width: 8 5%; height: 50px"><b style="font-weight: 900;font-size: 18px;">CON
+          EDISON
+          FLAGGING / PARKING LOCATION
+          TIMESHEET</b></td>
+    </tr>
+    <tr>
+      <td colspan="12">
+        Requestor: <span id="requestor"
+          style="display: inline-block; border-bottom: 1px solid ; width: 250px;text-align: center;"></span>
+        Date Requested: <span id="requestDate"
+          style="display: inline-block; border-bottom: 1px solid ; width: 200px; text-align: center;"></span>
+        Time Requested: <span id="requestTime"
+          style="display: inline-block; border-bottom: 1px solid ; width: 100px; text-align: center;"></span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="12">
+        Department: <span style="display: inline-block; border-bottom: 1px solid ; width: 700px;padding-left: 20px;"
+          id="departmentName"></span>
+         
+
+        <!-- GAS <span id="gas" style="display: inline-block; border-bottom: 1px solid ; width: 413px"></span> -->
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        Section #: <span id="sectionNum"
+          style="display: inline-block; border-bottom: 1px solid ; width: 95px;text-align: center;"></span>
+        POET #<span style="display: inline-block; border-bottom: 1px solid ; width: 200px;text-align: center;"
+          id="poet"></span>
+        Work Request #: <span id="workRequestNum"
+          style="display: inline-block; border-bottom: 1px solid ; width: 95px;text-align: center;"></span>
+        Receipt # <span id="receipt"
+          style="display: inline-block; border-bottom: 1px solid ; width: 95px;text-align: center;"></span>
+        PO #: <span id="po"
+          style="display: inline-block; border-bottom: 1px solid ; width: 95px;text-align: center;"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        Location # 1: <span id="location1"
+          style="display: inline-block; border-bottom: 1px solid ; width: 400px;text-align: center;"></span>
+
+        Muni /Borough: <span id="muni1"
+          style="display: inline-block; border-bottom: 1px solid ; width: 220px;text-align: center;"></span>
+        Structure #: <span id="structure"
+          style="display: inline-block; border-bottom: 1px solid ; width: 80px;text-align: center;"></span>
+      </td>
+
+    </tr>
+    <!-- <tr>
+      <td colspan="3">
+        Location # 2: <span id="location2"
+          style="display: inline-block; border-bottom: 1px solid ; width: 510px"></span>
+
+        Muni /Borough: <span id="borough2" style="display: inline-block; border-bottom: 1px solid ; width: 90px"></span>
+        Structure #: <span id="secure2" style="display: inline-block; border-bottom: 1px solid ; width: 90px"></span>
+      </td>
+
+    </tr> -->
+    <tr>
+      <!-- <td colspan="3">
+        Location # 3: <span id="location3"
+          style="display: inline-block; border-bottom: 1px solid ; width: 290px; margin-right: 20px"></span>
+        Muni / Borough: <span id="borough3"
+          style="display: inline-block; border-bottom: 1px solid ; width: 342px"></span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">Location # 4: <span id="location4"
+          style="display: inline-block; border-bottom: 1px solid ; width: 290px; margin-right: 20px"></span>
+        Muni / Borough: <span id="borough4"
+          style="display: inline-block; border-bottom: 1px solid ; width: 342px"></span>
+      </td>
+    </tr> -->
+    <tr>
+      <td colspan="3">
+        Flagger / Spotter Name:<span id="flagger"
+          style="display: inline-block; border-bottom: 1px solid ; width: 350px;text-align: center;"></span>
+        Confirmation #: <span id="confirmationNumber"
+          style="display: inline-block; border-bottom: 1px solid ; width: 200px;text-align: center;"></span>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">Start Date: <span id="startDate"
+          style="display: inline-block; border-bottom: 1px solid ; width: 225px;text-align: center;"></span>
+        Start Time: <span id="startTime"
+          style="display: inline-block; border-bottom: 1px solid ; width: 201px; margin-right: 20px;text-align: center;"></span>
+        <!-- Please Check: (<span id=lunch"> </span>) Lunch (<span id="dinner"> </span>)
+              Dinner (<span id="noBreak"> </span>) -->
+    </tr>
+    <tr>
+      <td colspan="3">Finish Date: <span id="finishDate"
+          style="display: inline-block; border-bottom: 1px solid ; width: 215px;text-align: center;"></span>
+        Finish Time: <span id="finishTime"
+          style="display: inline-block; border-bottom: 1px solid ; width: 190px; margin-right: 20px;text-align: center;"></span>
+        Total Hours: <span id="totalHours"
+          style="display: inline-block; border-bottom: 1px solid ; width: 215px;text-align: center;"></span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">Con Edison Truck #: <span id="conEdisonTruck"
+          style="display: inline-block; border-bottom: 1px solid ; width: 260px;text-align: center;"></span>
+        Con Edison Supervisor: <span id="conEdisonSupervisor"
+          style="display: inline-block; border-bottom: 1px solid ; width: 350px;text-align: center;"></span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">Signer's Name: <span id="signerName"
+          style="display: inline-block; border-bottom: 1px solid ; width: 260px;text-align: center;"></span>
+      </td>
+    </tr>
+    <tr>
+      <td style="z-index: 10;" colspan="3" style="height: auto !important;">
+        Con Ed Rep Signature:
+        <span id="conEdRepSignature" style="display: inline-block; border-bottom: 1px solid ; width: 330px"> </span>
+          Date: <span id="date" style="display: inline-block; border-bottom: 1px solid ; width: 120px"></span>
+          Employee #: <span id="employee"
+            style="display: inline-block; border-bottom: 1px solid; width: 173px;text-align: center;"></span>
+      </td>
+    </tr>
+
+    </tr>
+  </table>
+</div>
+<!-- 
+<div id="pageFooter">
+  <table style="margin-left: auto; margin-right: auto;">
+    <tr>
+      <td colspan="3" align="center" style="color: red; font-size: 12px; font-weight: bold">YOU MUST TAKE A CLEAR PHOTO
+        OF THIS TIMESHEET AND SEND IT TO ADMIN AT THE COMPLETION OF YOUR JOB</td>
+    </tr>
+  </table>
+</div> -->
